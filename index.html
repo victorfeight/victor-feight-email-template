@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- On large screen, use 2:4:6 -->
+    <!-- On medium screens, use 2:5:5 -->
+    <!-- TODO: sm, xs -->
+    <div class="container-fluid d-flex vh-100">
+        <!-- Make row's container take up entire viewport height -->
+        <div class="row">
+            <div class="col-md-2 col-lg-2 p-4">
+                <div class="row">
+                    <div class="col my-col">
+                        <!-- SVG takes 3 width of space, Text gets 9 width of space -->
+                        <img class="svg col-3" src="icon.svg" alt="Bootstrap" width="32" height="32">
+                        <span class="my-col-text col-9">Welcome, Vic!</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col pt-4 pb-2 text-center">
+                        <button type="button" class="btn btn-lg btn-primary col-10">COMPOSE</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="sidenav" class="col pr-4 pt-5">
+                        <a id="boldInbox" href="#">Inbox (1)</a><br>
+                        <a href="#">Tagged</a><br>
+                        <a href="#">Important</a><br>
+                        <a href="#">Sent Mail</a><br>
+                        <a href="#">Drafts</a><br>
+                        <a href="#">Trash</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-lg-4 p-3">
+                <div class="row">
+                    <div class="col">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text border border-white" id="btnGroupAddon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                        class="bi bi-search" viewBox="-8 -8 32 32">
+                                        <path stroke="grey" stroke-width="2"
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <input class="form-control py-2 border-right-0 border border-white" type="search"
+                                placeholder="Search for emails">
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center pt-4 mx-1 my-2">
+                    <div class="card col-4">
+                        <div class="row card-body">
+                            <h5 class="card-title col-8">LinkedIn</h5>
+                            <span class="date-time col-4 d-flex justify-content-end">02:45pm</span>
+                            <p class="card-text">You have a new connection request.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center mx-1 my-2">
+                    <div class="card col-4">
+                        <div class="row card-body">
+                            <h5 class="card-title col-8">Michael Scott Daily Quotes</h5>
+                            <span class="date-time col-4 d-flex justify-content-end">July 3, 2020</span>
+                            <p class="card-text">I'm optimistic because everyday I get a little more desp...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center mx-1 my-2">
+                    <div class="card col-4">
+                        <div class="row card-body">
+                            <h5 class="card-title col-8">VicsTech</h5>
+                            <span class="date-time col-4 d-flex justify-content-end">Feb 9, 2020</span>
+                            <p class="card-text">Learn how you can give us money by calling (209) 322 7...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-lg-6 p-5">
+                <div class="row d-flex justify-content-center">
+                    <span class="col-10 email-field">
+                        To: vic@vicstech.org<br>
+                        From: re-reply@dune-quotes.media
+                    </span>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <h3 class="col-8 heading-dune pb-5 pt-4">
+                        Dune Daily Quotes
+                    </h3>
+                    <div class="col-2 button-icon-group d-flex align-items-center pt-3 pb-5">
+                        <div class="row">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn bg-transparent my-buttons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#cbc7c3" class="icon bi bi-trash-fill"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                                    </svg>
+                                </button>
+                                <button type="button" class="btn bg-transparent my-buttons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#cbc7c3" class="icon bi bi-reply-fill"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.921 11.9L1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z" />
+                                    </svg>
+                                </button>
+                                <button type="button" class="btn bg-transparent my-buttons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#cbc7c3" class="icon bi bi-three-dots"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-10 dune-content">
+                        <p>
+                            "The willow submits to the wind and prospers until one day it is many willows — a wall
+                            against the wind.
+                            This is the
+                            willow's purpose."<br>
+                            <br>
+                            "Without change something sleeps inside us, and seldom awakens. The sleeper must awaken"<br>
+                            <br>
+                            "The mystery of life isn't a problem to solve, but a reality to experience."<br>
+                        </p>
+                    </div>
+                </div>
+                <!-- Setting height on parent, my-auto on child centers it -->
+                <div class="container">
+                    <div class="form-row d-flex" style="height:500px">
+                        <div class="col-10 my-auto mx-auto">
+                            <div class="border border-bottom-0 input-group p-1">
+                                <textarea class="form-control border-0" id="formText" aria-label="With textarea"
+                                    rows="9"></textarea>
+                            </div>
+                            <div id="reply-row" class="border border-top-0 p-3 button-attach d-flex justify-content-between">
+                                <button style="transform: scale(1.9)" type="button" class="btn bg-transparent my-buttons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#cbc7c3" class="bi bi-paperclip"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z" />
+                                    </svg>
+                                </button>
+                                <button type="button" class="btn btn-outline-warning my-buttons w-25">
+                                   Reply 
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
